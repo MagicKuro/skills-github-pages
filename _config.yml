@@ -2,3 +2,7 @@ theme: minima
 title: "个人博客"
 author: "Magic小小黑"
 description: "Magic小小黑的个人博客"
+
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/yourname" }
