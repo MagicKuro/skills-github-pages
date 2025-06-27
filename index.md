@@ -1,3 +1,3 @@
 ---
-title: Welcome to my blog! Hello!
+title: 欢迎来到我的个人博客！
 ---
