@@ -6,3 +6,6 @@ description: "Magic小小黑的个人博客"
 minima:
   social_links:
     - { platform: github, user_url: "https://github.com/yourname" }
+
+feed:
+  enabled: false
