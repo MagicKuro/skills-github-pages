@@ -4,3 +4,5 @@ author: "Magic小小黑"
 description: "Magic小小黑的个人博客"
 minima:
   skin: classic
+  social_links:
+    - { platform: github,  user_url: "https://github.com/MagicKuro" }
