@@ -1,0 +1,28 @@
+<!-- CSS3 轮播图 -->
+<div class="css-carousel">
+  <div class="slides">
+    {% for slide in site.data.carousel.slides %}
+    <div class="slide" id="slide-{{ forloop.index }}">
+      <img 
+        src="{{ slide.image | relative_url }}" 
+        alt="{{ slide.alt }}"
+        loading="lazy"
+      >
+      {% if slide.title or slide.description %}
+      <div class="slide-content">
+        {% if slide.title %}<h3>{{ slide.title }}</h3>{% endif %}
+        {% if slide.description %}<p>{{ slide.description }}</p>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!-- 导航控制 -->
+  <div class="controls">
+    {% for slide in site.data.carousel.slides %}
+    <a href="#slide-{{ forloop.index }}" class="control-dot" 
+       aria-label="Go to slide {{ forloop.index }}"></a>
+    {% endfor %}
+  </div>
+</div>
