@@ -3,6 +3,8 @@ layout: default
 ---
 
 <div class="home">
+  <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
+  
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -29,5 +31,9 @@ layout: default
     </ul>
 
   {%- endif -%}
-
+  
+  {% if page.carousel %}
+    {% include carousel.html %}
+  {% endif %}
+  
 </div>
