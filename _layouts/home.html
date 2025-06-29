@@ -31,3 +31,29 @@ layout: default
   {%- endif -%}
 
 </div>
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <!-- ... 其他 head 内容 ... -->
+  
+  <!-- 引入轮播图样式 -->
+  <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
+  
+  <!-- 引入 jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- ... 页面内容 ... -->
+  
+  <!-- 包含轮播图组件 -->
+  {% if page.carousel %}
+    {% include carousel.html %}
+  {% endif %}
+  
+  <!-- ... 其他内容 ... -->
+  
+  <!-- 引入轮播图脚本 -->
+  <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+</body>
+</html>
