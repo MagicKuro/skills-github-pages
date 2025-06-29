@@ -1,0 +1,111 @@
+/* 轮播图容器 */
+.carousel {
+  position: relative;
+  max-width: 800px;
+  height: 450px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 图片容器 */
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* 单张图片 */
+.slides img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  object-fit: cover;
+}
+
+.slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 导航按钮 */
+.controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.controls .prev {
+  left: 15px;
+}
+
+.controls .next {
+  right: 15px;
+}
+
+/* 指示点 */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px;
+    margin: 1rem auto;
+  }
+  
+  .controls button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 250px;
+  }
+  
+  .dots {
+    bottom: 10px;
+  }
+}
